@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-brutalist",
+  "private": true,
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i input.css -o output.css --watch",
+    "build": "npx @tailwindcss/cli -i input.css -o output.css --minify",
+    "start": "npx http-server -p 3000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4",
+    "@tailwindcss/cli": "^4"
+  }
+}
