@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "npx @tailwindcss/cli@^4 -i input.css -o output.css --watch",
-    "build": "npx @tailwindcss/cli@^4 -i input.css -o output.css --minify",
+    "build": "npx @tailwindcss/cli@^4 -i input.css -o dist/output.css --minify && cp -r fonts dist/fonts && cp index.html dist/index.html",
     "start": "npx live-server"
   }
 }
