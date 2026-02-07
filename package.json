@@ -2,8 +2,12 @@
   "name": "alxmy.me",
   "private": true,
   "scripts": {
-    "dev": "npx @tailwindcss/cli@^4 -i input.css -o output.css --watch",
-    "build": "npx @tailwindcss/cli@^4 -i input.css -o dist/output.css --minify && cp -r fonts dist/fonts && cp index.html dist/index.html",
+    "dev": "npx @tailwindcss/cli -i input.css -o output.css --watch",
+    "build": "npx @tailwindcss/cli -i input.css -o dist/output.css --minify && cp -r fonts dist/fonts && cp index.html dist/index.html",
     "start": "npx live-server"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
   }
 }

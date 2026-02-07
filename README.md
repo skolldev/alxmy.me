@@ -9,7 +9,7 @@ Personal portfolio site.
 
 ## Development
 
-The project is dependency free-ish and just uses the tailwind cli to build the css.
+The project just uses the tailwind cli during development to build the css.
 
 Use the tailwind cli to build the css in watch mode:
 
