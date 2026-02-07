@@ -1,13 +1,9 @@
 {
-  "name": "portfolio-brutalist",
+  "name": "alxmy.me",
   "private": true,
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i input.css -o output.css --watch",
-    "build": "npx @tailwindcss/cli -i input.css -o output.css --minify",
-    "start": "npx http-server -p 3000"
-  },
-  "devDependencies": {
-    "tailwindcss": "^4",
-    "@tailwindcss/cli": "^4"
+    "dev": "npx @tailwindcss/cli@^4 -i input.css -o output.css --watch",
+    "build": "npx @tailwindcss/cli@^4 -i input.css -o output.css --minify",
+    "start": "npx live-server"
   }
 }
