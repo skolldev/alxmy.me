@@ -77,4 +77,4 @@ If you have questions or concerns, you’re welcome to contact me.
 
 If you have any questions about this privacy policy, you can contact me using my email address:
 
-alexander.may@hey.com
+{{ site.email }}

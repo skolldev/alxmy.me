@@ -3,5 +3,10 @@
   "url": "https://alxmy.me",
   "description": "Alexander May - Frontend engineer with 10 years of experience in Angular and TypeScript. Based in Munich, currently at codecentric.",
   "author": "Alexander May",
-  "fathomSiteId": "BUHUYCTT"
+  "email": "alexander.may@hey.com",
+  "fathomSiteId": "BUHUYCTT",
+  "social": [
+    { "label": "GitHub", "url": "https://github.com/skolldev", "external": true },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/may-dev/", "external": true }
+  ]
 }

@@ -12,7 +12,7 @@ import { chromium } from "playwright";
   await page.waitForTimeout(1000);
 
   await page.screenshot({
-    path: "images/og.png",
+    path: "src/images/og.png",
     type: "png",
   });
 

@@ -15,4 +15,4 @@ Südliche Ingolstädter Straße 5b
 
 ## Contact
 
-Email: alexander.may@hey.com
+Email: {{ site.email }}
