@@ -181,7 +181,7 @@
   }
 
   .prose-content figure {
-    @apply w-1/2 my-8 place-self-center;
+    @apply w-full max-w-2xl my-8 place-self-center;
   }
 
   .prose-content figcaption {
