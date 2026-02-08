@@ -42,7 +42,7 @@ And it makes sense - code reviews are hard. Thinking through someone else’s de
 
 ## The real cost
 
-Working code gets rewritten to satisfy abstract purity metrics. If that seems like a stretch, I found a master's thesis titled "Functional Purity as a Code Quality Metric in Multi-Paradigm Languages".
+Working code gets rewritten to satisfy some kind of abstract purity metrics.
 
 Teams stop asking "is this clear?" and start asking "is this clean?" And those sound like the same question, but they're not.
 
