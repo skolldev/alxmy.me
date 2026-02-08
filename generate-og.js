@@ -78,7 +78,7 @@ const cardStyle = {
   height: "100%",
 };
 
-function buildPostCard(title, date, rt) {
+function buildPostCard(title, date, rt, description) {
   const meta = rt ? `${date}  •  ${rt}` : date;
 
   return {
@@ -103,12 +103,27 @@ function buildPostCard(title, date, rt) {
                 children: title,
               },
             },
+            description
+              ? {
+                  type: "div",
+                  props: {
+                    style: {
+                      display: "flex",
+                      marginTop: 24,
+                      fontSize: 36,
+                      letterSpacing: "0.1em",
+                      opacity: 0.7,
+                    },
+                    children: description,
+                  },
+                }
+              : null,
             {
               type: "div",
               props: {
                 style: {
                   display: "flex",
-                  marginTop: 24,
+                  marginTop: description ? 16 : 24,
                   fontSize: 20,
                   letterSpacing: "0.2em",
                   textTransform: "uppercase",
@@ -261,8 +276,9 @@ for await (const file of glob("src/blog/*.md")) {
   const title = data.title || slug;
   const date = data.date ? formatDate(data.date) : "";
   const rt = readingTime(content).text;
+  const description = data.description || "";
 
-  await generateImage(buildPostCard(title, date, rt), `_site/og/${slug}.png`);
+  await generateImage(buildPostCard(title, date, rt, description), `_site/og/${slug}.png`);
   count++;
 }
 

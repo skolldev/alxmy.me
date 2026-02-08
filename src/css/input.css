@@ -180,6 +180,18 @@
     @apply bg-transparent p-0;
   }
 
+  .prose-content figure {
+    @apply w-1/2 my-8 place-self-center;
+  }
+
+  .prose-content figcaption {
+    @apply text-sm text-white/50 text-center my-4;
+  }
+
+  .prose-content img {
+    @apply rounded border border-white/10 place-self-center;
+  }
+
   .prose-content hr {
     @apply border-white/20 my-10;
   }

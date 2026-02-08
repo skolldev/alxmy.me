@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "dev:11ty": "npx @11ty/eleventy --serve",
-    "dev:css": "npx @tailwindcss/cli -i src/css/input.css -o _site/css/output.css --watch",
+    "dev:css": "npx postcss src/css/input.css -o _site/css/output.css --watch",
     "build": "npm-run-all build:css build:11ty build:og",
-    "build:css": "npx @tailwindcss/cli -i src/css/input.css -o _site/css/output.css --minify",
+    "build:css": "npx postcss src/css/input.css -o _site/css/output.css --minify",
     "build:11ty": "npx @11ty/eleventy",
     "build:og": "node generate-og.js"
   },
@@ -15,7 +15,11 @@
     "@11ty/eleventy": "^3.1.2",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/cli": "^4.0.0",
+    "@tailwindcss/postcss": "^4.1.18",
+    "cssnano": "^7.1.2",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
     "reading-time": "^1.5.0",
     "satori": "^0.19.1",
     "tailwindcss": "^4.0.0",
