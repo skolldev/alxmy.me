@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "npx @tailwindcss/cli -i input.css -o output.css --watch",
-    "build": "npx @tailwindcss/cli -i input.css -o dist/output.css --minify && cp-r images dist/images && cp -r fonts dist/fonts && cp index.html dist/index.html",
+    "build": "npx @tailwindcss/cli -i input.css -o dist/output.css --minify && cp -r images dist/images && cp -r fonts dist/fonts && cp index.html dist/index.html",
     "start": "npx live-server",
     "generate-og": "node generate-og.js"
   },
