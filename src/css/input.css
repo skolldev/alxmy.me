@@ -90,6 +90,13 @@
     background-size: 40px 40px;
   }
 
+  .large-grid {
+    background-image:
+      linear-gradient(rgba(245, 245, 245, 0.08) 3px, transparent 3px),
+      linear-gradient(90deg, rgba(245, 245, 245, 0.08) 3px, transparent 3px);
+    background-size: 64px 64px;
+  }
+
   ::selection {
     @apply bg-brand-yellow text-brand-black;
   }
@@ -133,5 +140,54 @@
 
   .noise {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  .prose-content h2 {
+    @apply text-2xl font-extrabold text-brand-yellow uppercase tracking-[0.1em] mt-10 mb-4;
+  }
+
+  .prose-content h3 {
+    @apply text-xl font-bold text-brand-yellow mt-8 mb-3;
+  }
+
+  .prose-content p {
+    @apply text-lg mb-6 leading-relaxed;
+  }
+
+  .prose-content a {
+    @apply text-brand-yellow font-bold underline decoration-brand-yellow underline-offset-4 transition-colors hover:text-white;
+  }
+
+  .prose-content ul,
+  .prose-content ol {
+    @apply text-lg pl-6 mb-6 list-disc marker:text-brand-yellow;
+  }
+
+  .prose-content ol {
+    @apply list-decimal;
+  }
+
+  .prose-content li {
+    @apply mb-2;
+  }
+
+  .prose-content blockquote {
+    @apply border-l-4 border-brand-yellow pl-6 my-6 opacity-80 italic;
+  }
+
+  .prose-content code {
+    @apply bg-white/10 px-1.5 py-0.5 text-sm rounded;
+  }
+
+  .prose-content pre {
+    @apply bg-white/5 border border-white/10 p-4 rounded overflow-x-auto mb-6;
+  }
+
+  .prose-content pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .prose-content hr {
+    @apply border-white/20 my-10;
   }
 }
