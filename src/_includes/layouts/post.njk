@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 eleventyComputed:
   pageTitle: "{{ title }} | {{ site.author }}"
+  ogImage: "{{ site.url }}/og/{{ page.fileSlug }}.png"
 ---
 <header class="section-box p-6 sm:p-12 mb-8 animate-slide-down">
   <h1 class="text-[2rem] sm:text-[clamp(2.5rem,8vw,5rem)] font-extrabold leading-[0.9] -tracking-[0.03em] uppercase">

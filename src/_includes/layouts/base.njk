@@ -30,7 +30,7 @@
       property="og:description"
       content="{{ description or site.description }}"
     />
-    <meta property="og:image" content="{{ site.url }}/images/og.png" />
+    <meta property="og:image" content="{{ ogImage or site.url + '/images/og.png' }}" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:site_name" content="{{ site.author }}" />
 
@@ -41,7 +41,7 @@
       name="twitter:description"
       content="{{ description or site.description }}"
     />
-    <meta name="twitter:image" content="{{ site.url }}/images/og.png" />
+    <meta name="twitter:image" content="{{ ogImage or site.url + '/images/og.png' }}" />
 
     <script
       src="https://cdn.usefathom.com/script.js"
