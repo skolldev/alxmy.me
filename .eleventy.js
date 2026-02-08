@@ -1,6 +1,7 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy({ "src/favicons": "/" });
 
   eleventyConfig.addWatchTarget("_site/css/output.css");
 
