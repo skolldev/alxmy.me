@@ -15,9 +15,15 @@ description: "Thoughts on frontend engineering, security, and building software 
     <a href="{{ post.url }}" class="link-item group">
       <div>
         <span class="font-bold text-lg uppercase">{{ post.data.title }}</span>
-        <time class="block text-xs tracking-[0.2em] mt-1 opacity-70 uppercase" datetime="{{ post.date | isoDate }}">
+        <div class="mt-1">
+          <time class="text-xs tracking-[0.2em] opacity-70 uppercase" datetime="{{ post.date | isoDate }}">
           {{ post.date | readableDate }}
-        </time>
+          </time>
+          {% set rt = post.content | readingTime %}
+          {% if rt %}
+            <span class="text-xs tracking-[0.2em] opacity-70 uppercase">&#8226 {{ rt }}</span>
+          {% endif %}
+        </div>
       </div>
       <span
         class="transition-transform group-hover:translate-x-[5px]"
@@ -28,3 +34,9 @@ description: "Thoughts on frontend engineering, security, and building software 
     <p class="text-lg opacity-70">No posts yet. Check back soon.</p>
   {% endfor %}
 </main>
+<nav class="mt-8 not-motion-reduce:animate-slide-up" style="animation-delay: 0.2s">
+  <a href="/" class="link-item group inline-flex gap-2 border-0 hover:text-brand-yellow transition-colors">
+    <span class="transition-transform group-hover:-translate-x-[5px]" aria-hidden="true">&larr;</span>
+    <span class="font-bold text-lg uppercase">Back to Home</span>
+  </a>
+</nav>

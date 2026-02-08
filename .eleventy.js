@@ -1,3 +1,5 @@
+import readingTime from "reading-time";
+
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/images");
@@ -6,7 +8,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("_site/css/output.css");
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/blog/*.md").sort((a, b) => b.date - a.date);
+    return collectionApi
+      .getFilteredByGlob("src/blog/*.md")
+      .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
@@ -19,6 +23,11 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("isoDate", (dateObj) => {
     return new Date(dateObj).toISOString().split("T")[0];
+  });
+
+  eleventyConfig.addFilter("readingTime", (content) => {
+    if (!content) return null;
+    return readingTime(content).text;
   });
 
   return {

@@ -1,14 +1,25 @@
 ---
 layout: layouts/base.njk
+eleventyComputed:
+  pageTitle: "{{ title }} | Alexander May"
 ---
 <header class="section-box p-6 sm:p-12 mb-8 animate-slide-down">
   <span class="section-label" aria-hidden="true">post</span>
   <h1 class="text-[2rem] sm:text-[clamp(2.5rem,8vw,5rem)] font-extrabold leading-[0.9] -tracking-[0.03em] uppercase">
     {{ title }}
   </h1>
-  <time class="block text-xs tracking-[0.2em] mt-6 opacity-70 uppercase" datetime="{{ date | isoDate }}">
+  <div class="mt-6">
+    <time class="text-xs tracking-[0.2em] opacity-70 uppercase" datetime="{{ date | isoDate }}">
     {{ date | readableDate }}
-  </time>
+    </time>
+  
+    {% set rt = content | readingTime %}
+    {% if rt %}
+      <span class="text-xs tracking-[0.2em] opacity-70 uppercase">&#8226 {{ rt }}</span>
+    {% endif %}
+  </div>
+
+
 </header>
 
 <main class="section-box not-motion-reduce:animate-slide-up prose-content" style="animation-delay: 0.1s">
