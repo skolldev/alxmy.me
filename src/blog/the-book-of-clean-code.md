@@ -37,7 +37,7 @@ And it makes sense - code reviews are hard. Thinking through someone else’s de
 
 <figure>
   <img src="/images/monke.png" alt="Cartoon of the '5 Monkeys and a Ladder' experiment" />
-  <figcaption>Nobody remembers why banana bad, but eating it gets you punished</figcaption>
+  <figcaption>Nobody remembers why banana bad, just that eating it gets you punished</figcaption>
 </figure>
 
 ## The real cost
