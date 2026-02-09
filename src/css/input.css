@@ -101,7 +101,7 @@
   }
 
   .section-box {
-    @apply border-[3px] bg-brand-black border-white p-6 sm:p-10 relative;
+    @apply border-[3px] bg-brand-black border-white p-4 sm:p-10 relative;
   }
 
   .link-item {
@@ -136,7 +136,7 @@
   }
 
   .prose-content h2 {
-    @apply text-2xl font-extrabold text-brand-yellow uppercase tracking-[0.1em] mt-10 mb-4;
+    @apply text-2xl font-extrabold text-brand-yellow uppercase tracking-widest mt-10 mb-4;
   }
 
   .prose-content h3 {
@@ -144,7 +144,7 @@
   }
 
   .prose-content p {
-    @apply text-lg mb-6 leading-relaxed;
+    @apply text-base mb-6 sm:text-lg leading-relaxed;
   }
 
   .prose-content a {
