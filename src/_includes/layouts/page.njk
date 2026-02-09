@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+<header class="section-box p-6 sm:p-12 mb-8 animate-slide-down">
+  <span class="section-label" aria-hidden="true">page</span>
+  <h1 class="text-[2rem] sm:text-[clamp(2.5rem,8vw,5rem)] font-extrabold leading-[0.9] -tracking-[0.03em] uppercase">
+    {{ title }}
+  </h1>
+</header>
+
+<main class="section-box not-motion-reduce:animate-slide-up prose-content" style="animation-delay: 0.1s">
+  {{ content | safe }}
+</main>

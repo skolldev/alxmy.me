@@ -1,0 +1,18 @@
+<a href="{{ post.url }}" class="link-item group">
+  <div>
+    <span class="font-bold text-lg uppercase">{{ post.data.title }}</span>
+    <div class="mt-1">
+      <time class="text-xs tracking-[0.2em] opacity-70 uppercase" datetime="{{ post.date | isoDate }}">
+      {{ post.date | readableDate }}
+      </time>
+      {% set rt = post.content | readingTime %}
+      {% if rt %}
+        <span class="text-xs tracking-[0.2em] opacity-70 uppercase">&#8226 {{ rt }}</span>
+      {% endif %}
+    </div>
+  </div>
+  <span
+    class="transition-transform group-hover:translate-x-[5px]"
+    aria-hidden="true"
+  >&rarr;</span>
+</a>

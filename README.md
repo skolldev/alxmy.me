@@ -5,24 +5,26 @@ Personal portfolio site.
 ## Stack
 
 - Tailwind CSS v4
-- Vanilla HTML / JS
+- Eleventy
 
 ## Development
 
-The project just uses the tailwind cli during development to build the css.
+The project uses tailwind & postcss for the styles, eleventy for the site, and satori & resvg for the open graph images.
 
-Use the tailwind cli to build the css in watch mode:
+Locally watch mode, builds css and runs the site:
 
 ```bash
 npm run dev
 ```
 
-In development, i use live-server to serve the site:
+## Deployment
 
 ```bash
-npm run start
+npm run build
 ```
 
-## Deployment
+This will build css, site and use `generate-og.js` to generate the open graph images with satori & resvg.
+
+The built site is in the `_site` directory.
 
 Deploy to a static site host of your choice like Cloudflare Pages, Vercel, Netlify, etc.

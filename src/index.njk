@@ -1,0 +1,230 @@
+---
+layout: layouts/base.njk
+pageTitle: "Alexander May | Frontend Engineer"
+description: "Frontend engineer with a security habit. 10 years building applications in Angular and TypeScript across Automotive, EdTech, and Insurance."
+---
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author }}",
+  "url": "{{ site.url }}",
+  "jobTitle": "Frontend Engineer",
+  "description": "Frontend engineer with a security habit",
+  "knowsAbout": [
+    "Angular",
+    "TypeScript",
+    "Tailwind CSS",
+    "Testing Library",
+    "Cybersecurity"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "codecentric",
+    "url": "https://codecentric.de"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Munich",
+    "addressCountry": "DE"
+  },
+  "sameAs": [{% for link in site.social %}
+    "{{ link.url }}"{% if not loop.last %},{% endif %}{% endfor %}
+  ]
+}
+</script>
+
+<header class="section-box p-6 sm:p-12 mb-8 animate-slide-down">
+  <span class="section-label" aria-hidden="true">001</span>
+  <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-start">
+    <div>
+      <h1
+        class="text-[2rem] sm:text-[clamp(2.5rem,8vw,5rem)] font-extrabold leading-[0.9] -tracking-[0.03em] uppercase"
+      >
+        Alexander
+        <span class="block text-brand-yellow">May</span>
+      </h1>
+      <p class="text-lg tracking-[0.2em] mt-6 opacity-70">
+        Frontend engineer with a security habit
+      </p>
+    </div>
+    <div class="text-left lg:text-right text-xs tracking-widest">
+      <div
+        class="flex items-center justify-start lg:justify-end gap-2 mb-2"
+      >
+        <span
+          class="w-2 h-2 bg-brand-yellow not-motion-reduce:animate-pulse-dot"
+          aria-hidden="true"
+        ></span>
+        <span class="uppercase"
+          >Munich <span aria-hidden="true">//</span> Germany</span
+        >
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+  <section
+    class="lg:col-span-8 section-box not-motion-reduce:animate-slide-up"
+    style="animation-delay: 0.1s"
+    aria-labelledby="profile-heading"
+  >
+    <h2 id="profile-heading" class="section-label">
+      <span aria-hidden="true">002 // </span>Profile
+    </h2>
+    <p class="text-lg max-w-[60ch] mb-6">
+      <s class="decoration-2 text-white/80 decoration-brand-yellow"
+        >I build enterprise-grade systems that don't break.</s
+      ><span class="sr-only"> (scratch that)</span>
+    </p>
+    <p class="text-lg max-w-[60ch] mb-6">
+      I build calm, durable software and push back when complexity doesn't
+      earn its keep.
+    </p>
+    <p class="text-lg max-w-[60ch] mb-6">
+      10 years building production systems across Automotive, EdTech, and
+      Insurance.
+    </p>
+    <p class="text-lg max-w-[60ch] mb-6">
+      Currently at
+      <a
+        href="https://codecentric.de"
+        target="_blank"
+        rel="noopener"
+        class="text-brand-yellow font-bold underline decoration-brand-yellow underline-offset-4"
+        >codecentric<span class="sr-only"> (opens in new tab)</span></a
+      >. Clients bring hard problems, I leave behind systems that last and
+      teams that feel confident changing them.
+    </p>
+    <p class="text-lg max-w-[60ch] mb-6">
+      I specialize in
+      <strong class="text-brand-yellow font-bold"
+        >Angular/TypeScript</strong
+      >
+      ecosystems. Pragmatic beyond that.
+    </p>
+    <p class="text-lg max-w-[60ch] mb-6">
+      Currently working on my PJPT cert. Not as a career pivot, just
+      because I believe you build better systems when you understand how
+      they get taken apart.
+    </p>
+    <p class="text-lg max-w-[60ch]">
+      When not coding: lifting heavy things, obsessing over Neapolitan
+      pizza, building (and breaking) my homelab, and D&amp;D campaigns.
+    </p>
+  </section>
+
+  <aside
+    class="lg:col-span-4 section-box not-motion-reduce:animate-slide-up"
+    style="animation-delay: 0.2s"
+    aria-labelledby="projects-heading"
+  >
+    <h2 id="projects-heading" class="section-label">
+      <span aria-hidden="true">003 // </span>Last Projects
+    </h2>
+    {% for project in projects %}
+    <article class="{{ 'pb-6' if loop.first else 'py-6' }}{{ ' border-b border-white/20' if not loop.last }}">
+      <h3 class="text-xl font-extrabold leading-none text-brand-yellow">
+        {{ project.name }}
+      </h3>
+      <p class="text-xs tracking-[0.2em] mt-2 opacity-70 uppercase">
+        {{ project.industry }}
+      </p>
+      {% if project.description %}
+      <p class="text-xs tracking-[0.2em] mt-2 opacity-70">
+        {{ project.description }}
+      </p>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </aside>
+
+  <section
+    class="lg:col-span-8 section-box not-motion-reduce:animate-slide-up"
+    style="animation-delay: 0.3s"
+    aria-labelledby="stack-heading"
+  >
+    <h2 id="stack-heading" class="section-label">
+      <span aria-hidden="true">004 // </span>How I work
+    </h2>
+    <div>
+      <ul class="text-lg mb-6 list-none p-0" role="list">
+        <li>
+          I favor early, direct collaboration with UX over ticket-driven
+          handoffs
+        </li>
+        <li>I prefer boring, readable systems over clever ones.</li>
+        <li>I say no when I need to, and I explain why</li>
+      </ul>
+      <p class="text-lg mb-2">Current stack:</p>
+      <ul
+        class="text-lg md:flex gap-7 pl-6 md:pl-0 list-disc marker:text-brand-yellow"
+        role="list"
+      >
+        <li class="font-bold md:marker:content-['']">Angular</li>
+        <li class="font-bold">TypeScript</li>
+        <li class="font-bold">Tailwind</li>
+        <li class="font-bold">Testing Library</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav
+    class="lg:col-span-4 section-box not-motion-reduce:animate-slide-up"
+    style="animation-delay: 0.4s"
+    aria-labelledby="connections-heading"
+  >
+    <h2 id="connections-heading" class="section-label">
+      <span aria-hidden="true">005 // </span>Connections
+    </h2>
+    {% for link in site.social %}
+    <a
+      href="{{ link.url }}"
+      class="link-item group"
+      {% if link.external %}target="_blank" rel="noopener"{% endif %}
+    >
+      <span class="font-bold text-lg uppercase">{{ link.label }}</span>
+      {% if link.external %}<span class="sr-only">(opens in new tab)</span>{% endif %}
+      <span
+        class="transition-transform group-hover:translate-x-[5px]"
+        aria-hidden="true"
+        >&rarr;</span
+      >
+    </a>
+    {% endfor %}
+    <a href="mailto:{{ site.email }}" class="link-item group">
+      <span class="font-bold text-lg uppercase">Contact</span>
+      <span
+        class="transition-transform group-hover:translate-x-[5px]"
+        aria-hidden="true"
+        >&rarr;</span
+      >
+    </a>
+  </nav>
+
+  <section
+    class="lg:col-span-12 section-box not-motion-reduce:animate-slide-up"
+    style="animation-delay: 0.5s"
+    aria-labelledby="blog-heading"
+  >
+    <h2 id="blog-heading" class="section-label">
+      <span aria-hidden="true">006 // </span>Blog
+    </h2>
+    {% for post in collections.posts %}
+      {% if loop.index0 < 3 %}
+        {% include "post-card.njk" %}
+      {% endif %}
+    {% else %}
+      <p class="text-lg opacity-70">No posts yet. Check back soon.</p>
+    {% endfor %}
+    <a href="/blog" class="link-item group">
+      <span class="font-bold text-lg uppercase">All Posts</span>
+      <span
+        class="transition-transform group-hover:translate-x-[5px]"
+        aria-hidden="true"
+      >&rarr;</span>
+    </a>
+  </section>
+</main>

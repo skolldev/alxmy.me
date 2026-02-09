@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Underwriting Platform",
+    "industry": "Insurance"
+  },
+  {
+    "name": "Freight Invoice Management System",
+    "industry": "Logistics"
+  },
+  {
+    "name": "StudySmarter",
+    "industry": "EdTech",
+    "description": "Learning platform serving millions of students"
+  },
+  {
+    "name": "Spendit",
+    "industry": "FinTech",
+    "description": "Employee benefits platform"
+  },
+  {
+    "name": "Kratzer Automation",
+    "industry": "Automotive",
+    "description": "Testbench management system"
+  }
+]
