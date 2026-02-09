@@ -36,7 +36,7 @@ Somewhere along, the reasons get lost. You become more senior, and one day you�
 And it makes sense - code reviews are hard. Thinking through someone else’s design decisions takes time and attention. Checking code against a book is easier, and feels objective, but it’s also a way out of having to engage with the code in front of you.
 
 <figure>
-  <img src="/images/monke.png" alt="Cartoon of the '5 Monkeys and a Ladder' experiment" />
+  <img src="/images/monke.jpg" alt="Cartoon of the '5 Monkeys and a Ladder' experiment" />
   <figcaption>Nobody remembers why banana bad, just that eating it gets you punished</figcaption>
 </figure>
 
