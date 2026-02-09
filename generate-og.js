@@ -5,10 +5,9 @@ import readingTime from "reading-time";
 import satori from "satori";
 import { decompress } from "wawoff2";
 
-// Load site data
 const site = JSON.parse(await readFile("src/_data/site.json", "utf-8"));
 
-// Decompress woff2 → raw font data for Satori
+// Satori doesnt take woff2, so we need to decompress it
 const loadFont = (path) =>
   readFile(path)
     .then(decompress)
@@ -278,10 +277,11 @@ for await (const file of glob("src/blog/*.md")) {
   const rt = readingTime(content).text;
   const description = data.description || "";
 
-  await generateImage(buildPostCard(title, date, rt, description), `_site/og/${slug}.png`);
+  await generateImage(
+    buildPostCard(title, date, rt, description),
+    `_site/og/${slug}.png`,
+  );
   count++;
 }
 
-console.log(
-  `Done — ${count + 1} OG image${count ? "s" : ""} generated (1 site + ${count} post${count !== 1 ? "s" : ""})`,
-);
+console.log(`${count + 1} OG images generated (1 site + ${count} posts)`);
