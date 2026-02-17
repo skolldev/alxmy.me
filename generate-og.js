@@ -93,7 +93,7 @@ function buildPostCard(title, date, rt, description) {
               type: "div",
               props: {
                 style: {
-                  fontSize: 64,
+                  fontSize: 72,
                   fontWeight: 800,
                   lineHeight: 0.9,
                   letterSpacing: "-0.03em",
@@ -109,7 +109,7 @@ function buildPostCard(title, date, rt, description) {
                     style: {
                       display: "flex",
                       marginTop: 24,
-                      fontSize: 36,
+                      fontSize: 40,
                       letterSpacing: "0.1em",
                       opacity: 0.7,
                     },
@@ -123,7 +123,7 @@ function buildPostCard(title, date, rt, description) {
                 style: {
                   display: "flex",
                   marginTop: description ? 16 : 24,
-                  fontSize: 20,
+                  fontSize: 28,
                   letterSpacing: "0.2em",
                   textTransform: "uppercase",
                   opacity: 0.7,
