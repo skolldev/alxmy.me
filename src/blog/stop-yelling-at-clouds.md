@@ -14,7 +14,7 @@ Every single time, like clockwork.
 
 If there's one thing more predictable than Javascript fatigue, it's the outrage cycle. Something new shows up. People who haven't tried it explain, at length, why it's terrible. The people actually using it shrug and ship their projects.
 
-I'm not here to tell you that every new tool is great. Some of them aren't. But i think the _pattern_ is the problem, not any individual tool.
+I'm not here to tell you that every new tool is great. Some of them aren't. But I think the _pattern_ is the problem, not any individual tool.
 
 ## The Holy War Template
 
@@ -38,12 +38,12 @@ Let me walk you through the greatest hits:
 
 > "LLMs are just predicting the next token, they don't actually _understand_ anything."
 
-Those aren't actually arguments, they're really just memes. They get copy-pasted across Twitter threads and Reddit comments and conference hallway conversations by people who have never run `npm install tailwindcss` or spent a serious afternoon building something with an LLM. Someone saw a screenshot of a gnarly Tailwind class list, felt a visceral "that looks disgusting" reaction, and now they have an Opinion&copy;. Someone read that LLMs somehow work with stochastic probabilities or something, and now they can dismiss the entire field in a single sentence at dinner parties.
+Those aren't actually arguments, they're really just memes. They get copy-pasted across Twitter threads and Reddit comments and conference hallway conversations by people who have never run `npm install tailwindcss` or spent a serious afternoon building something with an LLM. Someone saw a screenshot of a gnarly Tailwind class list, felt a visceral "that looks disgusting" reaction, and now they have an Opinion&trade;. Someone read that LLMs somehow work with stochastic probabilities or something, and now they can dismiss the entire field in a single sentence at dinner parties.
 
 "LLMs just predict the next token" is technically true in the same way that "brains just fire neurons" is technically true, and equally useful as an explanation.
 
 <figure>
-  <img src="https://media1.tenor.com/m/mcyLvmQ_qQwAAAAd/alanis-morissette-and-isnt-it-ironic-dont-you-think.gif" alt="Alanis Morissette and Isn't It Ironic? Don't You Think?" />
+  <img src="/images/ironic.jpg" alt="Alanis Morissette and Isn't It Ironic? Don't You Think?" />
   <figcaption>It's like raaaaain, on your wedding day</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ I don't blame anybody for not being able to try every new tool that comes out - 
 
 Let's get out our armchair psychology hats and look behind the curtain: the _intensity_ of the reaction is almost never proportional to the actual technical stakes.
 
-Gitmojis are a perfect example. We're talking about putting a small pictograph in front of a commit message. That's it. No, really, there's nothing more to it. And yet people react to it like someone proposed rewriting the Linux kernel in Scratch. The technical impact is precisely zero. Your git log still works. Your CI pipeline doesn't care. Nothing breaks.
+Gitmojis are a perfect example. We're talking about putting a small icon in front of a commit message. That's it. No, really, there's nothing more to it. And yet people react to it like someone proposed rewriting the Linux kernel in Scratch. The technical impact is precisely zero. Your git log still works. Your CI pipeline doesn't care. Nothing breaks.
 
 So why the fury?
 
@@ -77,7 +77,7 @@ a.k.a "Didn't you just write a blog post about this?"
 
 [Yes, I did.](https://alxmy.me/blog/the-book-of-clean-code/) And I'll do it again.
 
-I catch myself doing this with Angular. I know Angular deeply. When someone tells me they chose React or Vue for a project, there's a small, irrational part of my brain that wants to explain why they're wrong. Not because there's any rational reason their project would be better in Angular — but because my expertise _wants_ to be relevant.
+I catch myself doing this with Angular. I know Angular deeply. When someone tells me they chose React or Vue for a project, there's a small, irrational part of my brain that wants to explain why they're wrong. Not because there's any rational reason their project would be better in Angular - but because my expertise _wants_ to be relevant.
 
 The best engineers do something deceptively simple: they evaluate tools based on the problem in front of them, not based on what they already love or hate. They try things before dismissing them - not everything, obviously, life is finite - but when something gains genuine traction, they get curious instead of defensive. And they understand the difference between _"I don't prefer this"_ and _"this is bad"_, because they know their preferences are shaped by their specific experience.
 
@@ -91,7 +91,7 @@ So yes, some skepticism is warranted, if not healthy. It gets problematic when i
 
 The funny thing is there's always two extreme sides to every discussion, and a huge silent middle. (No I'm not talking about politics! I promise!)
 
-The LLM discourse is the best example of this. One side says nobody will write their own code in two years. The other side says they're useless autocomplete. Meanwhile, a huge silent middle is just using them in their daily workand getting a genuine, boring, undramatic productivity boost from it.
+The LLM discourse is the best example of this. One side says nobody will write their own code in two years. The other side says they're useless autocomplete. Meanwhile, a huge silent middle is just using them in their daily work and getting a genuine, boring, undramatic productivity boost from it.
 
 ## A more honest conversation
 
