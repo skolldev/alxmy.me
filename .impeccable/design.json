@@ -1,0 +1,659 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T20:39:26.536Z",
+  "title": "Design System: alxmy.me",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Signal Indigo",
+        "canonical": "oklch(0.5 0.2 266)",
+        "tonalRamp": [
+          "oklch(0.150 0.102 266)",
+          "oklch(0.264 0.156 266)",
+          "oklch(0.379 0.188 266)",
+          "oklch(0.493 0.200 266)",
+          "oklch(0.607 0.191 266)",
+          "oklch(0.721 0.161 266)",
+          "oklch(0.836 0.110 266)",
+          "oklch(0.950 0.038 266)"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Accent Ink",
+        "canonical": "oklch(0.99 0 0)",
+        "tonalRamp": [
+          "oklch(0.150 0.000 0)",
+          "oklch(0.264 0.000 0)",
+          "oklch(0.379 0.000 0)",
+          "oklch(0.493 0.000 0)",
+          "oklch(0.607 0.000 0)",
+          "oklch(0.721 0.000 0)",
+          "oklch(0.836 0.000 0)",
+          "oklch(0.950 0.000 0)"
+        ]
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Signal Wash",
+        "canonical": "oklch(0.5 0.2 266 / 0.1)",
+        "tonalRamp": [
+          "oklch(0.150 0.102 266)",
+          "oklch(0.264 0.156 266)",
+          "oklch(0.379 0.188 266)",
+          "oklch(0.493 0.200 266)",
+          "oklch(0.607 0.191 266)",
+          "oklch(0.721 0.161 266)",
+          "oklch(0.836 0.110 266)",
+          "oklch(0.950 0.038 266)"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "oklch(0.982 0.004 260)",
+        "tonalRamp": [
+          "oklch(0.150 0.002 260)",
+          "oklch(0.264 0.003 260)",
+          "oklch(0.379 0.004 260)",
+          "oklch(0.493 0.004 260)",
+          "oklch(0.607 0.004 260)",
+          "oklch(0.721 0.003 260)",
+          "oklch(0.836 0.002 260)",
+          "oklch(0.950 0.001 260)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Clean Sheet",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(0.150 0.000 0)",
+          "oklch(0.264 0.000 0)",
+          "oklch(0.379 0.000 0)",
+          "oklch(0.493 0.000 0)",
+          "oklch(0.607 0.000 0)",
+          "oklch(0.721 0.000 0)",
+          "oklch(0.836 0.000 0)",
+          "oklch(0.950 0.000 0)"
+        ]
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "oklch(0.965 0.005 260)",
+        "tonalRamp": [
+          "oklch(0.150 0.003 260)",
+          "oklch(0.264 0.004 260)",
+          "oklch(0.379 0.005 260)",
+          "oklch(0.493 0.005 260)",
+          "oklch(0.607 0.005 260)",
+          "oklch(0.721 0.004 260)",
+          "oklch(0.836 0.003 260)",
+          "oklch(0.950 0.001 260)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(0.18 0.012 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.006 265)",
+          "oklch(0.264 0.009 265)",
+          "oklch(0.379 0.011 265)",
+          "oklch(0.493 0.012 265)",
+          "oklch(0.607 0.011 265)",
+          "oklch(0.721 0.010 265)",
+          "oklch(0.836 0.007 265)",
+          "oklch(0.950 0.002 265)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(0.42 0.015 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.008 265)",
+          "oklch(0.264 0.012 265)",
+          "oklch(0.379 0.014 265)",
+          "oklch(0.493 0.015 265)",
+          "oklch(0.607 0.014 265)",
+          "oklch(0.721 0.012 265)",
+          "oklch(0.836 0.008 265)",
+          "oklch(0.950 0.003 265)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Pewter",
+        "canonical": "oklch(0.5 0.015 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.008 265)",
+          "oklch(0.264 0.012 265)",
+          "oklch(0.379 0.014 265)",
+          "oklch(0.493 0.015 265)",
+          "oklch(0.607 0.014 265)",
+          "oklch(0.721 0.012 265)",
+          "oklch(0.836 0.008 265)",
+          "oklch(0.950 0.003 265)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(0.91 0.006 260)",
+        "tonalRamp": [
+          "oklch(0.150 0.003 260)",
+          "oklch(0.264 0.005 260)",
+          "oklch(0.379 0.006 260)",
+          "oklch(0.493 0.006 260)",
+          "oklch(0.607 0.006 260)",
+          "oklch(0.721 0.005 260)",
+          "oklch(0.836 0.003 260)",
+          "oklch(0.950 0.001 260)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Firm Hairline",
+        "canonical": "oklch(0.86 0.008 260)",
+        "tonalRamp": [
+          "oklch(0.150 0.004 260)",
+          "oklch(0.264 0.006 260)",
+          "oklch(0.379 0.008 260)",
+          "oklch(0.493 0.008 260)",
+          "oklch(0.607 0.008 260)",
+          "oklch(0.721 0.006 260)",
+          "oklch(0.836 0.004 260)",
+          "oklch(0.950 0.002 260)"
+        ]
+      },
+      "glow-a": {
+        "role": "primary",
+        "displayName": "Behind-Light Indigo",
+        "canonical": "oklch(0.72 0.14 266 / 0.32)",
+        "tonalRamp": [
+          "oklch(0.150 0.071 266)",
+          "oklch(0.264 0.109 266)",
+          "oklch(0.379 0.132 266)",
+          "oklch(0.493 0.140 266)",
+          "oklch(0.607 0.134 266)",
+          "oklch(0.721 0.113 266)",
+          "oklch(0.836 0.077 266)",
+          "oklch(0.950 0.027 266)"
+        ]
+      },
+      "glow-b": {
+        "role": "primary",
+        "displayName": "Behind-Light Cyan",
+        "canonical": "oklch(0.82 0.1 210 / 0.3)",
+        "tonalRamp": [
+          "oklch(0.150 0.051 210)",
+          "oklch(0.264 0.078 210)",
+          "oklch(0.379 0.094 210)",
+          "oklch(0.493 0.100 210)",
+          "oklch(0.607 0.095 210)",
+          "oklch(0.721 0.080 210)",
+          "oklch(0.836 0.055 210)",
+          "oklch(0.950 0.019 210)"
+        ]
+      },
+      "accent-dark": {
+        "role": "primary",
+        "displayName": "Signal Indigo (dark)",
+        "canonical": "oklch(0.72 0.15 268)",
+        "tonalRamp": [
+          "oklch(0.150 0.076 268)",
+          "oklch(0.264 0.117 268)",
+          "oklch(0.379 0.141 268)",
+          "oklch(0.493 0.150 268)",
+          "oklch(0.607 0.143 268)",
+          "oklch(0.721 0.121 268)",
+          "oklch(0.836 0.082 268)",
+          "oklch(0.950 0.028 268)"
+        ]
+      },
+      "accent-ink-dark": {
+        "role": "primary",
+        "displayName": "Accent Ink (dark)",
+        "canonical": "oklch(0.16 0.02 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.010 265)",
+          "oklch(0.264 0.016 265)",
+          "oklch(0.379 0.019 265)",
+          "oklch(0.493 0.020 265)",
+          "oklch(0.607 0.019 265)",
+          "oklch(0.721 0.016 265)",
+          "oklch(0.836 0.011 265)",
+          "oklch(0.950 0.004 265)"
+        ]
+      },
+      "accent-soft-dark": {
+        "role": "primary",
+        "displayName": "Signal Wash (dark)",
+        "canonical": "oklch(0.72 0.15 268 / 0.14)",
+        "tonalRamp": [
+          "oklch(0.150 0.076 268)",
+          "oklch(0.264 0.117 268)",
+          "oklch(0.379 0.141 268)",
+          "oklch(0.493 0.150 268)",
+          "oklch(0.607 0.143 268)",
+          "oklch(0.721 0.121 268)",
+          "oklch(0.836 0.082 268)",
+          "oklch(0.950 0.028 268)"
+        ]
+      },
+      "bg-dark": {
+        "role": "neutral",
+        "displayName": "Cool Paper (dark)",
+        "canonical": "oklch(0.16 0.008 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.004 265)",
+          "oklch(0.264 0.006 265)",
+          "oklch(0.379 0.008 265)",
+          "oklch(0.493 0.008 265)",
+          "oklch(0.607 0.008 265)",
+          "oklch(0.721 0.006 265)",
+          "oklch(0.836 0.004 265)",
+          "oklch(0.950 0.002 265)"
+        ]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Clean Sheet (dark)",
+        "canonical": "oklch(0.2 0.01 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.005 265)",
+          "oklch(0.264 0.008 265)",
+          "oklch(0.379 0.009 265)",
+          "oklch(0.493 0.010 265)",
+          "oklch(0.607 0.010 265)",
+          "oklch(0.721 0.008 265)",
+          "oklch(0.836 0.005 265)",
+          "oklch(0.950 0.002 265)"
+        ]
+      },
+      "surface-2-dark": {
+        "role": "neutral",
+        "displayName": "Mist (dark)",
+        "canonical": "oklch(0.23 0.011 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.006 265)",
+          "oklch(0.264 0.009 265)",
+          "oklch(0.379 0.010 265)",
+          "oklch(0.493 0.011 265)",
+          "oklch(0.607 0.010 265)",
+          "oklch(0.721 0.009 265)",
+          "oklch(0.836 0.006 265)",
+          "oklch(0.950 0.002 265)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ink (dark)",
+        "canonical": "oklch(0.95 0.005 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.003 265)",
+          "oklch(0.264 0.004 265)",
+          "oklch(0.379 0.005 265)",
+          "oklch(0.493 0.005 265)",
+          "oklch(0.607 0.005 265)",
+          "oklch(0.721 0.004 265)",
+          "oklch(0.836 0.003 265)",
+          "oklch(0.950 0.001 265)"
+        ]
+      },
+      "ink-2-dark": {
+        "role": "neutral",
+        "displayName": "Graphite (dark)",
+        "canonical": "oklch(0.78 0.01 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.005 265)",
+          "oklch(0.264 0.008 265)",
+          "oklch(0.379 0.009 265)",
+          "oklch(0.493 0.010 265)",
+          "oklch(0.607 0.010 265)",
+          "oklch(0.721 0.008 265)",
+          "oklch(0.836 0.005 265)",
+          "oklch(0.950 0.002 265)"
+        ]
+      },
+      "ink-3-dark": {
+        "role": "neutral",
+        "displayName": "Pewter (dark)",
+        "canonical": "oklch(0.7 0.012 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.006 265)",
+          "oklch(0.264 0.009 265)",
+          "oklch(0.379 0.011 265)",
+          "oklch(0.493 0.012 265)",
+          "oklch(0.607 0.011 265)",
+          "oklch(0.721 0.010 265)",
+          "oklch(0.836 0.007 265)",
+          "oklch(0.950 0.002 265)"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Hairline (dark)",
+        "canonical": "oklch(0.28 0.012 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.006 265)",
+          "oklch(0.264 0.009 265)",
+          "oklch(0.379 0.011 265)",
+          "oklch(0.493 0.012 265)",
+          "oklch(0.607 0.011 265)",
+          "oklch(0.721 0.010 265)",
+          "oklch(0.836 0.007 265)",
+          "oklch(0.950 0.002 265)"
+        ]
+      },
+      "line-strong-dark": {
+        "role": "neutral",
+        "displayName": "Firm Hairline (dark)",
+        "canonical": "oklch(0.34 0.014 265)",
+        "tonalRamp": [
+          "oklch(0.150 0.007 265)",
+          "oklch(0.264 0.011 265)",
+          "oklch(0.379 0.013 265)",
+          "oklch(0.493 0.014 265)",
+          "oklch(0.607 0.013 265)",
+          "oklch(0.721 0.011 265)",
+          "oklch(0.836 0.008 265)",
+          "oklch(0.950 0.003 265)"
+        ]
+      },
+      "glow-a-dark": {
+        "role": "primary",
+        "displayName": "Behind-Light Indigo (dark)",
+        "canonical": "oklch(0.58 0.2 266 / 0.55)",
+        "tonalRamp": [
+          "oklch(0.150 0.102 266)",
+          "oklch(0.264 0.156 266)",
+          "oklch(0.379 0.188 266)",
+          "oklch(0.493 0.200 266)",
+          "oklch(0.607 0.191 266)",
+          "oklch(0.721 0.161 266)",
+          "oklch(0.836 0.110 266)",
+          "oklch(0.950 0.038 266)"
+        ]
+      },
+      "glow-b-dark": {
+        "role": "primary",
+        "displayName": "Behind-Light Cyan (dark)",
+        "canonical": "oklch(0.62 0.13 210 / 0.38)",
+        "tonalRamp": [
+          "oklch(0.150 0.066 210)",
+          "oklch(0.264 0.101 210)",
+          "oklch(0.379 0.122 210)",
+          "oklch(0.493 0.130 210)",
+          "oklch(0.607 0.124 210)",
+          "oklch(0.721 0.105 210)",
+          "oklch(0.836 0.071 210)",
+          "oklch(0.950 0.025 210)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name in the homepage hero only."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "Principles band claims; display-scale typographic set piece."
+      },
+      "closing": {
+        "displayName": "Closing",
+        "purpose": "The single contact call that closes the homepage."
+      },
+      "page-title": {
+        "displayName": "Page title",
+        "purpose": "h1 on posts, the writing index and legal pages."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Homepage section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Post titles in lists."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero role, ledes, principle explanations, large profile prose."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "UI and short copy."
+      },
+      "prose": {
+        "displayName": "Prose",
+        "purpose": "Long-form post text in the 44rem reading column."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Metadata and panel field labels; sentence case, tabular numerals."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Code blocks and inline code only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel-lift",
+        "value": "0 1px 2px oklch(0.2 0.02 265 / 0.06), 0 12px 24px -8px oklch(0.2 0.02 265 / 0.1), 0 40px 80px -24px oklch(0.3 0.06 265 / 0.22)",
+        "purpose": "The one lifted object per page (work panel). Light theme."
+      },
+      {
+        "name": "panel-lift-dark",
+        "value": "0 1px 0 oklch(1 0 0 / 0.06) inset, 0 12px 24px -8px oklch(0 0 0 / 0.5), 0 40px 80px -24px oklch(0 0 0 / 0.6)",
+        "purpose": "Work panel in dark theme; top layer becomes an inset highlight."
+      },
+      {
+        "name": "button-lift",
+        "value": "0 1px 2px oklch(0.2 0.02 265 / 0.14), 0 4px 10px -4px oklch(0.2 0.02 265 / 0.22)",
+        "purpose": "Primary button only. Light theme."
+      },
+      {
+        "name": "button-lift-dark",
+        "value": "0 1px 2px oklch(0 0 0 / 0.5), 0 4px 10px -4px oklch(0 0 0 / 0.5)",
+        "purpose": "Primary button in dark theme."
+      },
+      {
+        "name": "behind-light",
+        "value": "radial-gradient(50% 50% at 30% 40%, var(--glow-a), transparent 70%), radial-gradient(45% 45% at 75% 70%, var(--glow-b), transparent 70%); filter: blur(24px)",
+        "purpose": "Ambient light pooled on the ground behind the hero object. Not a box-shadow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All authored motion: panel settle, button press, arrow nudges."
+      },
+      {
+        "name": "settle",
+        "value": "1.4s ease-out 0.15s; from rotateX(14deg) rotateY(-16deg) rotateZ(2deg) translateY(24px) scale(0.96), blur(6px), opacity 0.35",
+        "purpose": "Work panel entrance, at 960px and up with prefers-reduced-motion: no-preference only."
+      },
+      {
+        "name": "cursor-wash",
+        "value": "420px radial of accent-soft at pointer, opacity 0.4s",
+        "purpose": "Cursor-tracked light on the work panel while hovered; script skips under reduced motion."
+      },
+      {
+        "name": "state",
+        "value": "0.2s",
+        "purpose": "Colour, background and border transitions on links, rows and buttons."
+      },
+      {
+        "name": "nudge",
+        "value": "0.25s ease-out, translate 2-3px",
+        "purpose": "Arrow icons on hover (back arrow moves left, external arrow moves up-right)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "479px (max-width)"
+      },
+      {
+        "name": "panel-foot",
+        "value": "560px"
+      },
+      {
+        "name": "post-row",
+        "value": "720px"
+      },
+      {
+        "name": "principles",
+        "value": "900px"
+      },
+      {
+        "name": "wide",
+        "value": "960px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one primary action per group (email).",
+      "html": "<a class=\"ds ds-btn ds-btn-primary\" href=\"#\">Get in touch <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds{--bg:oklch(0.982 0.004 260);--surface:oklch(1 0 0);--surface-2:oklch(0.965 0.005 260);--ink:oklch(0.18 0.012 265);--ink-2:oklch(0.42 0.015 265);--ink-3:oklch(0.5 0.015 265);--line:oklch(0.91 0.006 260);--line-strong:oklch(0.86 0.008 260);--accent:oklch(0.5 0.2 266);--accent-ink:oklch(0.99 0 0);font-family:'Mona Sans',ui-sans-serif,system-ui,sans-serif;color:var(--ink);}.ds-icon{width:1em;height:1em;flex:none;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s cubic-bezier(0.16,1,0.3,1);}.ds-btn{display:inline-flex;align-items:center;gap:.5rem;height:2.875rem;padding:0 1.25rem;border-radius:999px;font-size:.9688rem;font-weight:560;text-decoration:none;white-space:nowrap;border:0;cursor:pointer;transition:transform .2s cubic-bezier(0.16,1,0.3,1),background-color .2s,border-color .2s;}.ds-btn:active{transform:translateY(1px);}.ds-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}.ds-btn:hover .ds-icon{transform:translateX(2px);}.ds-btn:hover .ds-ext{transform:translate(2px,-2px);}.ds-btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 1px 2px oklch(0.2 0.02 265 / 0.14),0 4px 10px -4px oklch(0.2 0.02 265 / 0.22);}.ds-btn-primary:hover{background:color-mix(in oklch,var(--accent) 88%,var(--ink));}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary actions such as GitHub and LinkedIn.",
+      "html": "<a class=\"ds ds-btn ds-btn-ghost\" href=\"#\">GitHub <svg class=\"ds-icon ds-ext\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a>",
+      "css": ".ds{--bg:oklch(0.982 0.004 260);--surface:oklch(1 0 0);--surface-2:oklch(0.965 0.005 260);--ink:oklch(0.18 0.012 265);--ink-2:oklch(0.42 0.015 265);--ink-3:oklch(0.5 0.015 265);--line:oklch(0.91 0.006 260);--line-strong:oklch(0.86 0.008 260);--accent:oklch(0.5 0.2 266);--accent-ink:oklch(0.99 0 0);font-family:'Mona Sans',ui-sans-serif,system-ui,sans-serif;color:var(--ink);}.ds-icon{width:1em;height:1em;flex:none;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s cubic-bezier(0.16,1,0.3,1);}.ds-btn{display:inline-flex;align-items:center;gap:.5rem;height:2.875rem;padding:0 1.25rem;border-radius:999px;font-size:.9688rem;font-weight:560;text-decoration:none;white-space:nowrap;border:0;cursor:pointer;transition:transform .2s cubic-bezier(0.16,1,0.3,1),background-color .2s,border-color .2s;}.ds-btn:active{transform:translateY(1px);}.ds-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}.ds-btn:hover .ds-icon{transform:translateX(2px);}.ds-btn:hover .ds-ext{transform:translate(2px,-2px);}.ds-btn-ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);}.ds-btn-ghost:hover{border-color:var(--ink-3);}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky translucent header with wordmark and pill links.",
+      "html": "<header class=\"ds ds-header\"><a class=\"ds-wordmark\" href=\"#\">Alexander May</a><nav class=\"ds-nav\"><a href=\"#\">Work</a><a href=\"#\" aria-current=\"page\">Writing</a><a href=\"#\">Contact</a></nav></header>",
+      "css": ".ds{--bg:oklch(0.982 0.004 260);--surface:oklch(1 0 0);--surface-2:oklch(0.965 0.005 260);--ink:oklch(0.18 0.012 265);--ink-2:oklch(0.42 0.015 265);--ink-3:oklch(0.5 0.015 265);--line:oklch(0.91 0.006 260);--line-strong:oklch(0.86 0.008 260);--accent:oklch(0.5 0.2 266);--accent-ink:oklch(0.99 0 0);font-family:'Mona Sans',ui-sans-serif,system-ui,sans-serif;color:var(--ink);}.ds-header{display:flex;align-items:center;justify-content:space-between;height:4rem;padding:0 1.5rem;background:color-mix(in oklch,var(--bg) 78%,transparent);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);}.ds-wordmark{font-weight:650;font-stretch:110%;letter-spacing:-0.02em;text-decoration:none;color:inherit;font-size:1rem;}.ds-nav{display:flex;gap:.25rem;font-size:.9375rem;}.ds-nav a{text-decoration:none;color:var(--ink-2);padding:.45rem .75rem;border-radius:999px;transition:color .2s,background-color .2s;}.ds-nav a:hover{color:var(--ink);background:var(--surface-2);}.ds-nav a[aria-current=page]{color:var(--ink);}.ds-nav a:focus-visible,.ds-wordmark:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Tag and Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill outline tags for industries and counts; squared chips for the stack list.",
+      "html": "<div class=\"ds ds-chiprow\"><span class=\"ds-tag\">Insurance</span><span class=\"ds-count\">5</span><span class=\"ds-chip\">Angular</span><span class=\"ds-chip\">TypeScript</span></div>",
+      "css": ".ds{--bg:oklch(0.982 0.004 260);--surface:oklch(1 0 0);--surface-2:oklch(0.965 0.005 260);--ink:oklch(0.18 0.012 265);--ink-2:oklch(0.42 0.015 265);--ink-3:oklch(0.5 0.015 265);--line:oklch(0.91 0.006 260);--line-strong:oklch(0.86 0.008 260);--accent:oklch(0.5 0.2 266);--accent-ink:oklch(0.99 0 0);font-family:'Mona Sans',ui-sans-serif,system-ui,sans-serif;color:var(--ink);}.ds-chiprow{display:flex;gap:.375rem;align-items:center;flex-wrap:wrap;}.ds-tag,.ds-count{font-size:.75rem;font-weight:560;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:.15rem .6rem;}.ds-count{font-weight:600;font-variant-numeric:tabular-nums;background:var(--surface);padding:.05rem .5rem;}.ds-chip{font-size:.8125rem;font-weight:540;background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:.1rem .5rem;}"
+    },
+    {
+      "name": "Work Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "The one lifted object: project index with head, hover rows and a footer cell.",
+      "html": "<section class=\"ds ds-panel\"><header class=\"ds-panel-head\"><h3 class=\"ds-panel-title\">Recent projects <span class=\"ds-count\">2</span></h3><span class=\"ds-meta\">Five industries</span></header><ul class=\"ds-projects\"><li class=\"ds-project\"><span class=\"ds-pname\">Underwriting Platform</span><span class=\"ds-tag\">Insurance</span></li><li class=\"ds-project\"><span class=\"ds-pname\">Spendit</span><span class=\"ds-tag\">FinTech</span></li></ul><div class=\"ds-foot\"><p class=\"ds-flabel\">Latest writing</p><a class=\"ds-latest\" href=\"#\"><span>Latest post title</span><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a></div></section>",
+      "css": ".ds{--bg:oklch(0.982 0.004 260);--surface:oklch(1 0 0);--surface-2:oklch(0.965 0.005 260);--ink:oklch(0.18 0.012 265);--ink-2:oklch(0.42 0.015 265);--ink-3:oklch(0.5 0.015 265);--line:oklch(0.91 0.006 260);--line-strong:oklch(0.86 0.008 260);--accent:oklch(0.5 0.2 266);--accent-ink:oklch(0.99 0 0);font-family:'Mona Sans',ui-sans-serif,system-ui,sans-serif;color:var(--ink);}.ds-icon{width:1em;height:1em;flex:none;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s cubic-bezier(0.16,1,0.3,1);}.ds-panel{max-width:30rem;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 1px 2px oklch(0.2 0.02 265 / 0.06),0 12px 24px -8px oklch(0.2 0.02 265 / 0.1),0 40px 80px -24px oklch(0.3 0.06 265 / 0.22);}.ds-panel-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.875rem 1.25rem;background:var(--surface-2);border-bottom:1px solid var(--line);}.ds-panel-title{margin:0;font-size:.875rem;font-weight:600;display:flex;align-items:center;gap:.5rem;}.ds-count{font-size:.75rem;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.05rem .5rem;}.ds-meta{font-size:.8125rem;color:var(--ink-3);}.ds-projects{list-style:none;margin:0;padding:0;}.ds-project{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.85rem 1.25rem;transition:background-color .2s;}.ds-project:hover{background:var(--surface-2);}.ds-project+.ds-project{border-top:1px solid var(--line);}.ds-pname{font-weight:600;font-size:.9875rem;}.ds-tag{font-size:.75rem;font-weight:560;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:.15rem .6rem;}.ds-foot{border-top:1px solid var(--line);padding:1rem 1.25rem 1.125rem;}.ds-flabel{font-size:.75rem;color:var(--ink-3);margin:0 0 .4rem;}.ds-latest{display:flex;justify-content:space-between;align-items:center;gap:.75rem;text-decoration:none;color:inherit;font-weight:600;font-size:.9375rem;}.ds-latest .ds-icon{color:var(--ink-3);transition:transform .25s cubic-bezier(0.16,1,0.3,1),color .2s;}.ds-latest:hover .ds-icon{transform:translateX(3px);color:var(--accent);}.ds-latest:hover span{text-decoration:underline;}.ds-latest:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Post Row",
+      "kind": "custom",
+      "refersTo": "post-list",
+      "description": "Hairline-divided writing list; whole row clickable, title takes the accent on hover.",
+      "html": "<ul class=\"ds ds-posts\"><li class=\"ds-row\"><h3 class=\"ds-ptitle\"><a href=\"#\">A post title set at title size</a></h3><p class=\"ds-pdesc\">One-sentence description in Graphite at a 60ch measure.</p><p class=\"ds-pmeta\">12 Feb 2026 · 6 min read</p></li></ul>",
+      "css": ".ds{--bg:oklch(0.982 0.004 260);--surface:oklch(1 0 0);--surface-2:oklch(0.965 0.005 260);--ink:oklch(0.18 0.012 265);--ink-2:oklch(0.42 0.015 265);--ink-3:oklch(0.5 0.015 265);--line:oklch(0.91 0.006 260);--line-strong:oklch(0.86 0.008 260);--accent:oklch(0.5 0.2 266);--accent-ink:oklch(0.99 0 0);font-family:'Mona Sans',ui-sans-serif,system-ui,sans-serif;color:var(--ink);}.ds-posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);max-width:40rem;}.ds-row{position:relative;display:grid;gap:.35rem;padding:1.5rem 0;border-bottom:1px solid var(--line);}.ds-ptitle{margin:0;font-size:1.25rem;font-weight:620;letter-spacing:-0.015em;line-height:1.3;transition:color .2s;}.ds-ptitle a{text-decoration:none;color:inherit;}.ds-ptitle a::after{content:'';position:absolute;inset:0;}.ds-row:hover .ds-ptitle{color:var(--accent);}.ds-ptitle a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}.ds-pdesc{margin:0;color:var(--ink-2);max-width:60ch;}.ds-pmeta{margin:0;font-size:.8125rem;color:var(--ink-3);font-variant-numeric:tabular-nums;}"
+    },
+    {
+      "name": "Principles Band",
+      "kind": "custom",
+      "refersTo": "statement",
+      "description": "Display-scale typographic set piece; no numbers, no icons.",
+      "html": "<ul class=\"ds ds-principles\"><li><strong>Boring on purpose</strong><span>I prefer boring, readable systems over clever ones.</span></li><li><strong>No, with reasons</strong><span>I say no when I need to, and I explain why.</span></li></ul>",
+      "css": ".ds{--bg:oklch(0.982 0.004 260);--surface:oklch(1 0 0);--surface-2:oklch(0.965 0.005 260);--ink:oklch(0.18 0.012 265);--ink-2:oklch(0.42 0.015 265);--ink-3:oklch(0.5 0.015 265);--line:oklch(0.91 0.006 260);--line-strong:oklch(0.86 0.008 260);--accent:oklch(0.5 0.2 266);--accent-ink:oklch(0.99 0 0);font-family:'Mona Sans',ui-sans-serif,system-ui,sans-serif;color:var(--ink);}.ds-principles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}.ds-principles li{padding:2.25rem 2rem .5rem;border-top:1px solid var(--line-strong);}.ds-principles li:first-child{padding-left:0;}.ds-principles li+li{border-left:1px solid var(--line);}.ds-principles strong{display:block;font-size:clamp(2.25rem,1.4rem + 2.8vw,3.5rem);font-weight:700;font-stretch:118%;letter-spacing:-0.04em;line-height:.95;margin-bottom:1.25rem;}.ds-principles span{display:block;color:var(--ink-2);font-size:1.25rem;line-height:1.45;max-width:22ch;}"
+    },
+    {
+      "name": "Code Block",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "Long-form code in prose; the only place mono appears.",
+      "html": "<pre class=\"ds ds-pre\"><code>const answer = boring(readable);</code></pre>",
+      "css": ".ds{--bg:oklch(0.982 0.004 260);--surface:oklch(1 0 0);--surface-2:oklch(0.965 0.005 260);--ink:oklch(0.18 0.012 265);--ink-2:oklch(0.42 0.015 265);--ink-3:oklch(0.5 0.015 265);--line:oklch(0.91 0.006 260);--line-strong:oklch(0.86 0.008 260);--accent:oklch(0.5 0.2 266);--accent-ink:oklch(0.99 0 0);font-family:'Mona Sans',ui-sans-serif,system-ui,sans-serif;color:var(--ink);}.ds-pre{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.875rem;line-height:1.65;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1.25rem;overflow-x:auto;margin:0;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Calibrated Instrument",
+    "overview": "A personal site held to the standard of a good product company's marketing surface, with no metaphor and no costume. Nothing is themed; the impression of quality comes entirely from precision: a wide variable grotesk set tight at display sizes, cool near-white paper, hairline rules, one lifted object with light behind it, and a single well-timed motion. Credibility is earned by the details being right, not by anything announcing itself.\n\nDensity is calm and generous. Pages are mostly ink on paper, organised by 1px rules and whitespace rather than boxes. Exactly one element per page gets material treatment (the work index panel on the homepage); everything else stays flat. Light and dark are both first-class: the dark theme is a separately tuned set of values that follows the system preference, not an inversion.\n\nThe site rejects both the dev-portfolio dark-terminal look and the bare one-column text page, and it rejects themed worlds (object, era, poster metaphors) as a category.",
+    "keyCharacteristics": [
+      "Light-first, with an equally designed dark theme chosen by `prefers-color-scheme`.",
+      "Cool neutrals (hue 260 to 265, very low chroma) and one cool blue-violet accent.",
+      "Mona Sans variable for everything readable; widened (108 to 118%) and tightly tracked at display sizes.",
+      "JetBrains Mono only inside code.",
+      "Hairline 1px borders carry structure; soft layered shadows only where something is lifted.",
+      "One authored motion moment; all motion off under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The One Signal Rule",
+        "body": "The accent marks exactly two things: the primary action and live state (hover, focus, selection, caret, active link). It is never a background for content, a decorative stroke, or a heading colour at rest.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Daylights Rule",
+        "body": "Every colour token has a tuned dark counterpart, and new tokens must ship both. In dark, the accent lightens (to `accent-dark`) and its ink turns dark; surfaces step up in lightness from the ground (bg, then surface, then surface-2), so elevation still reads.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cool Neutral Rule",
+        "body": "Neutrals stay on hue 260 to 265 with chroma at or below 0.015. No warm greys, no pure black or white text on the ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stretch Rule",
+        "body": "Width is a display axis. Headings at headline size and above set width between 106% and 118% with negative tracking (-0.02em to -0.045em) and tight leading (0.92 to 1.05). Body, labels and UI stay at 100% width with normal tracking.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Is For Code Rule",
+        "body": "JetBrains Mono appears only in `code` and `pre`. Metadata (dates, reading time, counts) stays in Mona Sans with tabular numerals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Labels, nav and buttons are sentence case at normal tracking. No uppercase tracked micro-labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Lifted Object Rule",
+        "body": "A page has at most one panel-lift surface. Lists, posts, cards and sections stay flat on hairlines.",
+        "section": "elevation"
+      },
+      {
+        "name": "The No Halo Rule",
+        "body": "Shadows are neutral and ink-tinted. Coloured light lives only in the blurred behind-light and the cursor wash, never in a `box-shadow` glow around an element.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** reserve Signal Indigo for the primary action and live state (hover, focus, selection, caret, prose link underline).",
+      "**Do** ship every new colour as a light and dark pair, tuned separately.",
+      "**Do** widen display type (108 to 118%) and tighten tracking (-0.03 to -0.04em); keep reading text at normal width.",
+      "**Do** draw structure with 1px Hairline rules and tonal steps before reaching for a shadow.",
+      "**Do** use inline stroke SVG icons at 1em with a 1.75 stroke, inheriting text colour.",
+      "**Do** use tabular numerals in Mona Sans for dates, counts and reading time.",
+      "**Do** gate any motion behind `prefers-reduced-motion: no-preference`."
+    ],
+    "donts": [
+      "**Don't** add a second accent colour or use the accent as a surface or heading fill at rest.",
+      "**Don't** add coloured glow shadows; coloured light belongs only behind the hero object and in the panel's cursor wash.",
+      "**Don't** lift more than one object per page with the panel shadow.",
+      "**Don't** set eyebrows or kickers above headings, and don't number sections or principles.",
+      "**Don't** use JetBrains Mono outside code, and don't set uppercase tracked micro-labels.",
+      "**Don't** add another load or scroll animation; the panel settle is the one authored moment.",
+      "**Don't** drift toward the dark-terminal dev-portfolio look or a themed metaphor world."
+    ]
+  }
+}
