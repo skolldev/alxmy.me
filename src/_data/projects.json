@@ -1,11 +1,19 @@
 [
   {
+    "name": "Outpost",
+    "industry": "Open source",
+    "description": "Self-hosted error tracking, works with Sentry SDKs",
+    "url": "https://github.com/skolldev/outpost"
+  },
+  {
     "name": "Underwriting Platform",
-    "industry": "Insurance"
+    "industry": "Insurance",
+    "nda": true
   },
   {
     "name": "Freight Invoice Management System",
-    "industry": "Logistics"
+    "industry": "Logistics",
+    "nda": true
   },
   {
     "name": "StudySmarter",

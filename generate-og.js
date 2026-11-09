@@ -13,16 +13,16 @@ const loadFont = (path) =>
     .then(decompress)
     .then((data) => Buffer.from(data));
 
-const [fontRegular, fontBold, fontExtraBold] = await Promise.all([
-  loadFont("src/fonts/jetbrains-mono-v24-latin-regular.woff2"),
-  loadFont("src/fonts/jetbrains-mono-v24-latin-700.woff2"),
-  loadFont("src/fonts/jetbrains-mono-v24-latin-800.woff2"),
+const [fontRegular, fontSemiBold, fontBold] = await Promise.all([
+  loadFont("og-fonts/mona-sans-latin-400-normal.woff2"),
+  loadFont("og-fonts/mona-sans-latin-600-normal.woff2"),
+  loadFont("og-fonts/mona-sans-latin-700-normal.woff2"),
 ]);
 
 const fonts = [
-  { name: "JetBrains Mono", data: fontRegular, weight: 400, style: "normal" },
-  { name: "JetBrains Mono", data: fontBold, weight: 700, style: "normal" },
-  { name: "JetBrains Mono", data: fontExtraBold, weight: 800, style: "normal" },
+  { name: "Mona Sans", data: fontRegular, weight: 400, style: "normal" },
+  { name: "Mona Sans", data: fontSemiBold, weight: 600, style: "normal" },
+  { name: "Mona Sans", data: fontBold, weight: 700, style: "normal" },
 ];
 
 function parseFrontmatter(raw) {
@@ -50,196 +50,96 @@ function formatDate(dateStr) {
   });
 }
 
-const gridBg =
-  "linear-gradient(rgba(245,245,245,0.08) 3px, transparent 3px), " +
-  "linear-gradient(90deg, rgba(245,245,245,0.08) 3px, transparent 3px)";
+// Colours mirror the light theme tokens in src/css/input.css
+const C = {
+  bg: "#f8f9fb",
+  ink: "#16181d",
+  ink2: "#555a66",
+  line: "#e3e5ea",
+  accent: "#3b4ed8",
+};
 
 const outerStyle = {
   display: "flex",
+  flexDirection: "column",
   position: "relative",
   width: "100%",
   height: "100%",
-  backgroundColor: "#0a0a0a",
-  backgroundImage: gridBg,
-  backgroundSize: "64px 64px",
-  padding: "48px",
-  fontFamily: "JetBrains Mono",
-  color: "#ffffff",
+  backgroundColor: C.bg,
+  backgroundImage:
+    "radial-gradient(circle at 88% 12%, rgba(59,78,216,0.16), rgba(59,78,216,0) 45%), " +
+    "radial-gradient(circle at 70% 100%, rgba(80,170,220,0.14), rgba(80,170,220,0) 45%)",
+  padding: "72px 80px",
+  fontFamily: "Mona Sans",
+  color: C.ink,
 };
 
-const cardStyle = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  border: "3px solid #ffffff",
-  padding: "32px",
-  width: "100%",
-  height: "100%",
-};
+const el = (style, children) => ({
+  type: "div",
+  props: { style: { display: "flex", ...style }, children },
+});
+
+function footer() {
+  return el(
+    {
+      marginTop: "auto",
+      justifyContent: "space-between",
+      alignItems: "center",
+      borderTop: `2px solid ${C.line}`,
+      paddingTop: 28,
+      fontSize: 28,
+      color: C.ink2,
+    },
+    [
+      el({ fontWeight: 600, color: C.ink }, site.author),
+      el({ color: C.ink, fontWeight: 600 }, "alxmy.me"),
+    ],
+  );
+}
 
 function buildPostCard(title, date, rt, description) {
-  const meta = rt ? `${date}  •  ${rt}` : date;
-
-  return {
-    type: "div",
-    props: {
-      style: outerStyle,
-      children: {
-        type: "div",
-        props: {
-          style: cardStyle,
-          children: [
-            {
-              type: "div",
-              props: {
-                style: {
-                  fontSize: 72,
-                  fontWeight: 800,
-                  lineHeight: 0.9,
-                  letterSpacing: "-0.03em",
-                  textTransform: "uppercase",
-                },
-                children: title,
-              },
-            },
-            description
-              ? {
-                  type: "div",
-                  props: {
-                    style: {
-                      display: "flex",
-                      marginTop: 24,
-                      fontSize: 40,
-                      letterSpacing: "0.1em",
-                      opacity: 0.7,
-                    },
-                    children: description,
-                  },
-                }
-              : null,
-            {
-              type: "div",
-              props: {
-                style: {
-                  display: "flex",
-                  marginTop: description ? 16 : 24,
-                  fontSize: 28,
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  opacity: 0.7,
-                },
-                children: meta,
-              },
-            },
-            {
-              type: "div",
-              props: {
-                style: {
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "baseline",
-                  position: "absolute",
-                  bottom: 32,
-                  left: 32,
-                  right: 32,
-                  fontSize: 36,
-                  fontWeight: 700,
-                },
-                children: [
-                  {
-                    type: "span",
-                    props: {
-                      style: { letterSpacing: "0.1em", color: "#ffcc00" },
-                      children: "alxmy.me",
-                    },
-                  },
-                  {
-                    type: "span",
-                    props: {
-                      style: {
-                        letterSpacing: "0.2em",
-                        opacity: 0.7,
-                      },
-                      children: site.author,
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
+  const meta = rt ? `${date}  ·  ${rt}` : date;
+  return el(outerStyle, [
+    el({ fontSize: 26, color: C.ink2, marginBottom: 28 }, meta),
+    el(
+      {
+        fontSize: title.length > 40 ? 64 : 80,
+        fontWeight: 700,
+        lineHeight: 1.02,
+        letterSpacing: "-0.035em",
+        maxWidth: 960,
       },
-    },
-  };
+      title,
+    ),
+    description
+      ? el(
+          { marginTop: 28, fontSize: 32, lineHeight: 1.4, color: C.ink2, maxWidth: 940 },
+          description,
+        )
+      : null,
+    footer(),
+  ]);
 }
 
 function buildSiteCard() {
-  return {
-    type: "div",
-    props: {
-      style: outerStyle,
-      children: {
-        type: "div",
-        props: {
-          style: cardStyle,
-          children: [
-            {
-              type: "div",
-              props: {
-                style: {
-                  display: "flex",
-                  flexDirection: "column",
-                  fontSize: 128,
-                  fontWeight: 800,
-                  lineHeight: 0.9,
-                  letterSpacing: "-0.03em",
-                  textTransform: "uppercase",
-                },
-                children: [
-                  { type: "span", props: { children: "Alexander" } },
-                  {
-                    type: "span",
-                    props: {
-                      style: { color: "#ffcc00" },
-                      children: "May",
-                    },
-                  },
-                ],
-              },
-            },
-            {
-              type: "div",
-              props: {
-                style: {
-                  display: "flex",
-                  marginTop: 24,
-                  fontSize: 36,
-                  letterSpacing: "0.1em",
-                  opacity: 0.7,
-                },
-                children: "Frontend engineer with a security habit",
-              },
-            },
-            {
-              type: "div",
-              props: {
-                style: {
-                  display: "flex",
-                  position: "absolute",
-                  bottom: 48,
-                  left: 48,
-                  fontSize: 36,
-                  fontWeight: 700,
-                  color: "#ffcc00",
-                },
-                children: "alxmy.me",
-              },
-            },
-          ],
-        },
+  return el(outerStyle, [
+    el(
+      {
+        flexDirection: "column",
+        fontSize: 140,
+        fontWeight: 700,
+        lineHeight: 0.92,
+        letterSpacing: "-0.045em",
+        marginTop: 24,
       },
-    },
-  };
+      [el({}, "Alexander"), el({}, "May")],
+    ),
+    el(
+      { marginTop: 36, fontSize: 36, lineHeight: 1.35, color: C.ink2, maxWidth: 860 },
+      "Frontend engineer in Munich. Angular and TypeScript.",
+    ),
+    footer(),
+  ]);
 }
 
 async function generateImage(element, outPath) {
