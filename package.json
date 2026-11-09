@@ -9,7 +9,8 @@
     "build": "npm-run-all build:css build:11ty build:og",
     "build:css": "npx postcss src/css/input.css -o _site/css/output.css --minify",
     "build:11ty": "npx @11ty/eleventy",
-    "build:og": "node generate-og.js"
+    "build:og": "node generate-og.js",
+    "build:favicons": "node generate-favicons.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
