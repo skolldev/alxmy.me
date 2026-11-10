@@ -39,27 +39,32 @@
 }
 
 /* ---------- Tokens ---------- */
+/* Colours resolve via light-dark() against the root's color-scheme, so the
+   system preference and the manual toggle (html[data-theme]) share one set of tokens. */
 :root {
   color-scheme: light dark;
 
-  --bg: oklch(0.982 0.004 260);
-  --surface: oklch(1 0 0);
-  --surface-2: oklch(0.965 0.005 260);
-  --ink: oklch(0.18 0.012 265);
-  --ink-2: oklch(0.42 0.015 265);
-  --ink-3: oklch(0.5 0.015 265);
-  --line: oklch(0.91 0.006 260);
-  --line-strong: oklch(0.86 0.008 260);
-  --accent: oklch(0.5 0.2 266);
-  --accent-ink: oklch(0.99 0 0);
-  --accent-soft: oklch(0.5 0.2 266 / 0.1);
-  --glow-a: oklch(0.72 0.14 266 / 0.32);
-  --glow-b: oklch(0.82 0.1 210 / 0.3);
+  --bg: light-dark(oklch(0.982 0.004 260), oklch(0.16 0.008 265));
+  --surface: light-dark(oklch(1 0 0), oklch(0.2 0.01 265));
+  --surface-2: light-dark(oklch(0.965 0.005 260), oklch(0.23 0.011 265));
+  --ink: light-dark(oklch(0.18 0.012 265), oklch(0.95 0.005 265));
+  --ink-2: light-dark(oklch(0.42 0.015 265), oklch(0.78 0.01 265));
+  --ink-3: light-dark(oklch(0.5 0.015 265), oklch(0.7 0.012 265));
+  --line: light-dark(oklch(0.91 0.006 260), oklch(0.28 0.012 265));
+  --line-strong: light-dark(oklch(0.86 0.008 260), oklch(0.34 0.014 265));
+  --accent: light-dark(oklch(0.5 0.2 266), oklch(0.72 0.15 268));
+  --accent-ink: light-dark(oklch(0.99 0 0), oklch(0.16 0.02 265));
+  --accent-soft: light-dark(oklch(0.5 0.2 266 / 0.1), oklch(0.72 0.15 268 / 0.14));
+  --glow-a: light-dark(oklch(0.72 0.14 266 / 0.32), oklch(0.58 0.2 266 / 0.55));
+  --glow-b: light-dark(oklch(0.82 0.1 210 / 0.3), oklch(0.62 0.13 210 / 0.38));
   --shadow-panel:
-    0 1px 2px oklch(0.2 0.02 265 / 0.06),
-    0 12px 24px -8px oklch(0.2 0.02 265 / 0.1),
-    0 40px 80px -24px oklch(0.3 0.06 265 / 0.22);
-  --shadow-btn: 0 1px 2px oklch(0.2 0.02 265 / 0.14), 0 4px 10px -4px oklch(0.2 0.02 265 / 0.22);
+    0 1px 0 light-dark(transparent, oklch(1 0 0 / 0.06)) inset,
+    0 1px 2px light-dark(oklch(0.2 0.02 265 / 0.06), transparent),
+    0 12px 24px -8px light-dark(oklch(0.2 0.02 265 / 0.1), oklch(0 0 0 / 0.5)),
+    0 40px 80px -24px light-dark(oklch(0.3 0.06 265 / 0.22), oklch(0 0 0 / 0.6));
+  --shadow-btn:
+    0 1px 2px light-dark(oklch(0.2 0.02 265 / 0.14), oklch(0 0 0 / 0.5)),
+    0 4px 10px -4px light-dark(oklch(0.2 0.02 265 / 0.22), oklch(0 0 0 / 0.5));
 
   --step--1: 0.8125rem;
   --step-0: 1.0625rem;
@@ -74,28 +79,11 @@
   --max: 1200px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: oklch(0.16 0.008 265);
-    --surface: oklch(0.2 0.01 265);
-    --surface-2: oklch(0.23 0.011 265);
-    --ink: oklch(0.95 0.005 265);
-    --ink-2: oklch(0.78 0.01 265);
-    --ink-3: oklch(0.7 0.012 265);
-    --line: oklch(0.28 0.012 265);
-    --line-strong: oklch(0.34 0.014 265);
-    --accent: oklch(0.72 0.15 268);
-    --accent-ink: oklch(0.16 0.02 265);
-    --accent-soft: oklch(0.72 0.15 268 / 0.14);
-    --glow-a: oklch(0.58 0.2 266 / 0.55);
-    --glow-b: oklch(0.62 0.13 210 / 0.38);
-    --shadow-panel:
-      0 1px 0 oklch(1 0 0 / 0.06) inset,
-      0 12px 24px -8px oklch(0 0 0 / 0.5),
-      0 40px 80px -24px oklch(0 0 0 / 0.6);
-    --shadow-btn: 0 1px 2px oklch(0 0 0 / 0.5), 0 4px 10px -4px oklch(0 0 0 / 0.5);
-  }
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 /* ---------- Base ---------- */
@@ -243,8 +231,48 @@
     .nav a {
       padding-inline: 0.55rem;
     }
-    .nav a:last-child {
-      margin-right: -0.55rem;
+  }
+
+  .theme-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-left: 0.25rem;
+    border: 0;
+    border-radius: 999px;
+    background: none;
+    color: var(--ink-2);
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+  }
+  .theme-toggle[hidden] {
+    display: none;
+  }
+  .theme-toggle:hover {
+    color: var(--ink);
+    background: var(--surface-2);
+  }
+  .theme-toggle .icon {
+    grid-area: 1 / 1;
+    transition: transform 0.4s var(--ease-out), opacity 0.2s;
+  }
+  /* Show the icon for the theme you'd switch to. */
+  .theme-toggle .icon-moon,
+  [data-theme="dark"] .theme-toggle .icon-sun {
+    opacity: 1;
+    transform: none;
+  }
+  .theme-toggle .icon-sun,
+  [data-theme="dark"] .theme-toggle .icon-moon {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.6);
+  }
+  @media (max-width: 479px) {
+    .theme-toggle {
+      margin-left: 0;
+      margin-right: -0.4rem;
     }
   }
 
