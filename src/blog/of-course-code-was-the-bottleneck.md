@@ -45,7 +45,7 @@ Sure. And what do you think maintenance is? Debugging is reading and writing cod
 All of it starts with understanding the system, obviously. It still ends with someone doing the implementation work, and that's the part that got cheaper.
 
 <figure>
-  <img src="/images/not the bottleneck.jpg" alt="'This is fine' dog sitting in a room full of Jira tickets saying 'this is not the bottleneck'" />
+  <img src="/images/not_the_bottleneck.jpg" alt="'This is fine' dog sitting in a room full of Jira tickets saying 'this is not the bottleneck'" />
   <figcaption>Backlog: 340 tickets. Bottleneck: apparently not the code.</figcaption>
 </figure>
 
