@@ -1,8 +1,7 @@
 ---
 title: "Of Course Code Was the Bottleneck"
-date: 2026-11-09
+date: 2026-11-10
 description: "Something is always the bottleneck. That's how bottlenecks work."
-draft: true
 ---
 
 > "Code was never the bottleneck."
