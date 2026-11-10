@@ -17,6 +17,17 @@
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#f8f9fb" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#121317" media="(prefers-color-scheme: dark)" />
+    <script>
+      // Resolve the theme before first paint: saved choice, else system preference.
+      // Without JS, CSS falls back to prefers-color-scheme on its own.
+      (() => {
+        let saved = null;
+        try { saved = localStorage.getItem("theme"); } catch {}
+        const mq = matchMedia("(prefers-color-scheme: dark)");
+        const theme = saved === "light" || saved === "dark" ? saved : mq.matches ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
 
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -66,6 +77,9 @@
           <a href="/#work">Work</a>
           <a href="/blog/"{% if page.url.startsWith("/blog") %} aria-current="page"{% endif %}>Writing</a>
           <a href="/#contact">Contact</a>
+          <button class="theme-toggle" type="button" data-theme-toggle hidden aria-label="Switch to dark theme">
+            {{ icon("moon", "icon-moon") }}{{ icon("sun", "icon-sun") }}
+          </button>
         </nav>
       </div>
     </header>
@@ -91,6 +105,46 @@
         const onScroll = () => header.toggleAttribute("data-scrolled", window.scrollY > 8);
         onScroll();
         window.addEventListener("scroll", onScroll, { passive: true });
+      })();
+
+      (() => {
+        const root = document.documentElement;
+        const toggle = document.querySelector("[data-theme-toggle]");
+        const metas = document.querySelectorAll('meta[name="theme-color"]');
+        const colors = { light: "#f8f9fb", dark: "#121317" };
+        const mq = matchMedia("(prefers-color-scheme: dark)");
+        const saved = () => {
+          try { return localStorage.getItem("theme"); } catch { return null; }
+        };
+
+        const apply = (theme) => {
+          root.dataset.theme = theme;
+          metas.forEach((m) => (m.content = colors[theme]));
+          if (toggle) {
+            const next = theme === "dark" ? "light" : "dark";
+            toggle.setAttribute("aria-label", `Switch to ${next} theme`);
+            toggle.title = `Switch to ${next} theme`;
+          }
+        };
+
+        apply(root.dataset.theme === "dark" ? "dark" : "light");
+
+        // Follow the system until the visitor makes an explicit choice.
+        mq.addEventListener("change", (e) => {
+          if (!saved()) apply(e.matches ? "dark" : "light");
+        });
+
+        if (!toggle) return;
+        toggle.hidden = false;
+        toggle.addEventListener("click", () => {
+          const next = root.dataset.theme === "dark" ? "light" : "dark";
+          apply(next);
+          // Picking the system's own theme clears the override, so it keeps following the OS.
+          try {
+            if (next === (mq.matches ? "dark" : "light")) localStorage.removeItem("theme");
+            else localStorage.setItem("theme", next);
+          } catch {}
+        });
       })();
     </script>
   </body>
